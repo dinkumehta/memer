@@ -2,7 +2,8 @@ const express = require('express')
 const app = express()
 const mongoose = require("mongoose");
 const os = require('os');
-mongoose.connect(process.env.DATABASEURL)
+url = process.env.DATABASEURL || "mongodb://localhost/fgu"
+mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true});
 // mongoose.connect('mongodb+srv://Dinku:bhambham2@cluster0.xdujx.mongodb.net/omegle?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true})
 const omegleSchema = new mongoose.Schema({
   dateandtime: String,
