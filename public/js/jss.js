@@ -1,5 +1,5 @@
 var last_number = 1;
-var photos = [];
+var photos = [3];
 var max = 7;
 
 function nextbtn() {
